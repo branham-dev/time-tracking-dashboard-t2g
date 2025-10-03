@@ -14,15 +14,15 @@
 	--color-navy-200: hsl(236, 100%, 87%);
 	--color-white: white;
 
-	--standard-padding: 1rem;
+	--standard-padding: 1.5rem;
 	--standard-radius: 1.25rem;
-	--standard-gap: 0.2rem;
+	--standard-gap: 1.2rem;
 	--standard-opacity: 0.7;
 
 	--standard-card-margin-top: 1.75rem;
 	--standard-card-padding-top: 1.75rem;
 
-	--additional-gap-one: 1rem;
+	--additional-gap-one: 0.1rem;
 }
 
 *,
@@ -46,6 +46,7 @@ html {
 
 .report-container {
 	width: 85%;
+	max-width: 485px;
 	margin: 4rem auto;
 	display: flex;
 	flex-direction: column;
@@ -155,6 +156,9 @@ html {
 }
 
 .card__inner-container {
+    width: 100%;
+	max-width: 350px;
+    margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -175,4 +179,10 @@ html {
 .card__history {
 	color: var(--color-navy-200);
 	font-size: 0.72rem;
+}
+
+@media (min-width: 768px) {
+	.report-container {
+		display: grid;
+	}
 }
